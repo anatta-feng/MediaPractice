@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.toner.module_01" >
+
+    <application>
+        <activity android:name=".ShowImageActivity" />
+    </application>
+</manifest>

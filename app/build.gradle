@@ -32,4 +32,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    if (isModule.toBoolean()) {
+        implementation project(path: ':module_01')
+    }
+    implementation project(path: ':commom')
 }

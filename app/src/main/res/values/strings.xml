@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MediaPractice</string>
+    <string name="show_image">显示 Image</string>
 </resources>

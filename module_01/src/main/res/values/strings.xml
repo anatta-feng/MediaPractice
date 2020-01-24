@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">module_01</string>
+    <string name="imageview">ImageView</string>
+    <string name="surfaceview">SurfaceView</string>
+    <string name="custom_view">自定义 View</string>
 </resources>
