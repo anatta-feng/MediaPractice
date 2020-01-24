@@ -1,0 +1,2 @@
+include ':app', ':module_01'
+rootProject.name='MediaPractice'
