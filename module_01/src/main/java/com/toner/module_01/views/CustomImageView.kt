@@ -10,23 +10,20 @@ class CustomImageView : View {
     constructor(context: Context?, attrs: AttributeSet?) : super(
         context,
         attrs
-    ) {
-    }
+    )
 
     constructor(
         context: Context?,
         attrs: AttributeSet?,
         defStyleAttr: Int
-    ) : super(context, attrs, defStyleAttr) {
-    }
+    ) : super(context, attrs, defStyleAttr)
 
     constructor(
         context: Context?,
         attrs: AttributeSet?,
         defStyleAttr: Int,
         defStyleRes: Int
-    ) : super(context, attrs, defStyleAttr, defStyleRes) {
-    }
+    ) : super(context, attrs, defStyleAttr, defStyleRes)
 
     private val bitmap: Bitmap =
         BitmapFactory.decodeStream(context?.assets?.open("images/test_image.jpeg"))
@@ -34,7 +31,6 @@ class CustomImageView : View {
     private val src = Rect()
     private val dst = Rect()
     private val paint = Paint()
-
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
@@ -59,5 +55,4 @@ class CustomImageView : View {
         }
         canvas?.drawBitmap(bitmap, src, dst, paint)
     }
-
 }

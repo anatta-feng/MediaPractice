@@ -39,7 +39,6 @@ class RootFragment : Fragment(), View.OnClickListener {
     private fun showFragment(fragment: Fragment) {
         fragmentManager?.beginTransaction()
             ?.add(R.id.root, fragment)
-            ?.addToBackStack("")
             ?.commitAllowingStateLoss()
     }
 
