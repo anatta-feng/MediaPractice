@@ -12,7 +12,6 @@ import android.os.HandlerThread
 import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
-import java.util.*
 import java.util.concurrent.locks.ReentrantLock
 
 class Camera2Helper(var context: Context, surfaceView: SurfaceView) {
@@ -122,7 +121,6 @@ class Camera2Helper(var context: Context, surfaceView: SurfaceView) {
         override fun onError(camera: CameraDevice, error: Int) {
             camera.close()
         }
-
     }
 
     private val mCameraSessionStateCallback = object : CameraCaptureSession.StateCallback() {
@@ -138,7 +136,6 @@ class Camera2Helper(var context: Context, surfaceView: SurfaceView) {
                 mBackgroundHandler
             )
         }
-
     }
 
     private class ImageReaderAvailableListenerImp : ImageReader.OnImageAvailableListener {
@@ -167,9 +164,7 @@ class Camera2Helper(var context: Context, surfaceView: SurfaceView) {
                 lock.unlock()
             }
             image.close()
-
         }
-
     }
 
 }
