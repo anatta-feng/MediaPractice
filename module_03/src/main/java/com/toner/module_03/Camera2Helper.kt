@@ -38,6 +38,12 @@ class Camera2Helper(var context: Context, surfaceView: SurfaceView) {
         mSurfaceView.holder.addCallback(mSurfaceHolderCallback)
     }
 
+    fun stop() {
+        cameraDevice?.close()
+        mBackgroundThread.quit()
+        mImageReader.close()
+    }
+
     @SuppressLint("MissingPermission")
     private fun openCamera() {
         Log.d(TAG, "openCamera")
@@ -99,6 +105,7 @@ class Camera2Helper(var context: Context, surfaceView: SurfaceView) {
         }
 
         override fun surfaceDestroyed(holder: SurfaceHolder?) {
+            stop()
         }
 
         override fun surfaceCreated(holder: SurfaceHolder?) {
