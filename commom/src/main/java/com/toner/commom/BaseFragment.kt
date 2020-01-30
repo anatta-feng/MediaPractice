@@ -20,4 +20,14 @@ open class BaseFragment : Fragment() {
         }
 
     }
+
+    protected fun showFragment(fragment: Fragment) {
+        fragmentManager?.beginTransaction()
+            ?.add(getFragmentContainerId(), fragment)
+            ?.addToBackStack("")
+            ?.commitAllowingStateLoss()
+    }
+
+    protected open fun getFragmentContainerId(): Int = 0
+
 }

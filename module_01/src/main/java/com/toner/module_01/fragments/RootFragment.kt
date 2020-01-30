@@ -4,11 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import com.toner.commom.BaseFragment
 import com.toner.module_01.R
 import kotlinx.android.synthetic.main.fragment_root.view.*
 
-class RootFragment : Fragment(), View.OnClickListener {
+class RootFragment : BaseFragment(), View.OnClickListener {
     private lateinit var root: View
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,10 +36,6 @@ class RootFragment : Fragment(), View.OnClickListener {
         }
     }
 
-    private fun showFragment(fragment: Fragment) {
-        fragmentManager?.beginTransaction()
-            ?.add(R.id.root, fragment)
-            ?.commitAllowingStateLoss()
-    }
+    override fun getFragmentContainerId(): Int = R.id.root
 
 }
