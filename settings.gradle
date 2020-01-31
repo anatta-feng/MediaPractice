@@ -1,2 +1,2 @@
-include ':app', ':module_01', ':commom', ':module_02', ':module_03'
+include ':app', ':module_01', ':commom', ':module_02', ':module_03', ':module_04'
 rootProject.name='MediaPractice'
