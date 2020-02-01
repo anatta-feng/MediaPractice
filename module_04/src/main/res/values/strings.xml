@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">module_04</string>
+    <string name="play_ori">播放源视频</string>
+    <string name="play_new">播放无声视频</string>
+    <string name="start">开始剥离视频音轨</string>
 </resources>
