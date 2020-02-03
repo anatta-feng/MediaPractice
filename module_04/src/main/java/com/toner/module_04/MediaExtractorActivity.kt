@@ -155,6 +155,7 @@ class MediaExtractorActivity : AppCompatActivity(), SurfaceHolder.Callback {
             while (mediaExtractor.readSampleData(buffer, 0).also {
                     sampleSize = it
                 } > 0) {
+                // 抛出问题，为什么每一帧的 size 不同？
                 bufferInfo.size = sampleSize
                 bufferInfo.flags = MediaCodec.BUFFER_FLAG_KEY_FRAME
                 bufferInfo.presentationTimeUs += 1000 * 1000 / frameRate
