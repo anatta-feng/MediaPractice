@@ -37,6 +37,7 @@ dependencies {
         implementation project(path: ':module_02')
         implementation project(path: ':module_03')
         implementation project(path: ':module_04')
+        implementation project(path: ':module_05')
     }
     implementation project(path: ':commom')
 }
