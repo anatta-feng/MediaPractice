@@ -13,3 +13,7 @@
 * module_03
 
   使用 Camera API 获取预览并获得 NV21 数据流
+
+* module_04
+
+  解析和封装 MP4 文件
